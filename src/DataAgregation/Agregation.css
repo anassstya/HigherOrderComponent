@@ -1,0 +1,28 @@
+#app {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#app > div {
+    width: 250px;
+    margin: 10px;
+}
+
+table {
+    border-collapse: collapse;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+th, td {
+    border: 1px solid rgba(69, 115, 152, 0.99);
+    padding: 8px;
+}
+thead{
+    margin-bottom: 5px;
+}
