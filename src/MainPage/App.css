@@ -1,5 +1,6 @@
 .mainPage{
-    text-align: center;
+   text-align: center;
+    padding: 50px;
 }
 .mainPage__btn{
     font-size: 15px;
@@ -11,4 +12,5 @@
     border-radius: 10px;
     background-color: #cccccc;
     font-weight: 700;
+
 }
