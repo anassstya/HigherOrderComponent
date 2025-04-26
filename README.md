@@ -1,12 +1,19 @@
-# React + Vite
+# HOC — Higher Order Components
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Задача 1 – Форматирование даты публикации
+В данный момент выводится просто текущее значение. Пример: 2017-09-01 14:15:10. Решено изменять представление даты следующим образом в зависимости от его значения: 12 минут назад, если прошло меньше часа, 5 часов назад, если прошло больше часа, X дней назад, если больше суток.
+(Реализация: используя HOC, производится обертка компонента DateTime)
 
-Currently, two official plugins are available:
+[!]
+### Задача 2 – Форматирование даты публикации
+Мы решили улучшить отображение наших блоков таким образом, чтобы популярные статьи и видео, у которых 1000+ прочтений или просмотров, оборачивались в компонент Popular, а с количеством до 100 — в компонент New. Эти компоненты будут менять внешний облик блоков, привлекая внимание посетителей.
+(Реализация: Используя HOC, Video и Article оборачиваются таким образом, чтобы при отображении в компоненте List они помещались внутрь требуемого компонента Popular или New.)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Задача 3 – Агрегация данных для таблиц
+Есть набор из трёх компонентов, которые выводят табличные данные:
+- с группировкой по месяцам за текущий год,
+- с группировкой по годам,
+- с сортировкой по убыванию.
 
-## Expanding the ESLint configuration
+Реализация: Обернуть компоненты таблиц в HOC, который бы производил над данными операции, приводящие их к нужному виду. Также данные, которые группируются по дате, должны быть отсортированы по ней.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
